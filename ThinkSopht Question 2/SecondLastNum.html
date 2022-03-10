@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Second Largest Number of an arrary </title>
+</head>
+<body>
+	<script type="text/javascript">
+		//Javascript function that accept & return the largest number of an arrary
+		function nextBiggest(arr) {
+		  let max = -Infinity, result = -Infinity;
+
+		  for (const value of arr) {
+		    const nr = Number(value)
+
+		    if (nr > max) {
+		      [result, max] = [max, nr] // saving previous maximun number
+		    } else if (nr < max && nr > result) {
+		      result = nr; // new second biggest
+		    }
+		  }
+
+	  return result;
+	}
+		// Arrays
+		const arr = ['10','290','281','32','1','0','817'];
+
+		// loggin the result on a console
+		console.log(nextBiggest(arr));
+
+
+	</script>
+
+
+
+</body>
+</html>
